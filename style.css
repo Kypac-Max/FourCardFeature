@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--very-light-gray);
+}
+
+:root {
+    /* Colors */
+    /* Primary */
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+
+    /* Font */
+    --font-size: 15px;
+    --font-family: 'Poppins', sans-serif;
+    --font-weight-small: 200;
+    --font-weight-medium: 400;
+    --font-weight-large: 600;
+}
+
+.container {
+    margin: 4rem auto;
+    width: 70vw;
+}
+
+.content {
+    display: grid;
+    grid-template-areas: "left middle right";
+    margin: 4rem auto;
+    column-gap: 4rem;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: var(--font-weight-small);
+}
+
+.header span {
+    font-size: 3rem;
+    font-weight: var(--font-weight-large);
+}
+
+.header p {
+    color: var(--grayish-blue);
+    font-size: 2rem;
+    font-weight: var(--font-weight-small);
+}
+
+.content-info {
+    padding: 3rem;
+    border-radius: 1rem;
+    box-shadow: 0.3px 0.3px 15px #a9a9aa, -0.3px -0.3px 15px #dad7d7;
+    background-color: var(--very-light-gray);
+    height: 25rem;
+    width: 20vw;
+    position: relative;
+}
+
+.content-info h2 {
+    font-size: 2rem;
+}
+
+.content-info p {
+    font-size: 1.5rem;
+    color: var(--grayish-blue);
+}
+
+.content-info img {
+    width: 5rem;
+}
+
+.content-img {
+    position: absolute;
+    bottom: 4vh;
+    right: 4vh;
+}
+
+.content-karma,
+.content-builder {
+    grid-area: middle;
+}
+
+.content-supervisor {
+    grid-area: left;
+    margin: 8rem auto;
+    border-top: 0.5rem solid var(--cyan);
+}
+
+.content-karma {
+    border-top: 0.5rem solid var(--orange);
+    margin-top: 28rem;
+}
+
+.content-builder {
+    border-top: 0.5rem solid var(--red);
+}
+
+.content-calculator {
+    border-top: 0.5rem solid var(--blue);
+    grid-area: right;
+    margin: 8rem auto;
+}
+
+@media screen and (max-width: 57rem) {
+    .content {
+        grid-template-areas: "first""second""third""fourth";
+        grid-template-rows: 25% 25% 25% 25%;
+        margin: 8rem auto;
+        row-gap: 2rem;
+    }
+
+    .content-supervisor {
+        grid-area: first;
+        margin: 1rem auto;
+        width: 60vw;
+    }
+
+    .content-karma {
+        grid-area: second;
+        margin: 1rem auto;
+        width: 60vw;
+    }
+
+    .content-builder {
+        grid-area: third;
+        margin: 1rem auto;
+        width: 60vw;
+    }
+
+    .content-calculator {
+        grid-area: fourth;
+        margin: 1rem auto;
+        width: 60vw;
+    }
+}
