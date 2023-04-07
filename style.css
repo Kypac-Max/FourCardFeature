@@ -102,8 +102,6 @@ body {
 }
 
 .content-supervisor {
-    grid-area: left;
-    margin: 8rem auto;
     border-top: 0.5rem solid var(--cyan);
 }
 
@@ -118,8 +116,6 @@ body {
 
 .content-calculator {
     border-top: 0.5rem solid var(--blue);
-    grid-area: right;
-    margin: 8rem auto;
 }
 
 .content-left,
@@ -131,33 +127,23 @@ body {
 
 @media screen and (max-width: 57rem) {
     .content {
-        grid-template-areas: "first""second""third""fourth";
-        grid-template-rows: 25% 25% 25% 25%;
-        margin: 8rem auto;
+        grid-template-areas: "first""second""last";
+        grid-template-rows: 25% 50% 25%;
+        grid-template-columns: 1fr;
         row-gap: 2rem;
     }
 
-    .content-supervisor {
+    .content-left {
         grid-area: first;
-        margin: 1rem auto;
-        width: 70vw;
     }
 
-    .content-karma {
+    .content-middle {
         grid-area: second;
-        margin: 1rem auto;
-        width: 70vw;
+        margin-top: 2rem;
     }
 
-    .content-builder {
-        grid-area: third;
-        margin: 1rem auto;
-        width: 70vw;
-    }
-
-    .content-calculator {
-        grid-area: fourth;
-        margin: 1rem auto;
-        width: 70vw;
+    .content-right {
+        grid-area: last;
+        margin-top: 2rem;
     }
 }
